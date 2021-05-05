@@ -1,0 +1,34 @@
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes fade {
+    0% { color: transparent; }
+    100% { color: var(--secondary); }
+}
+
+.container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    >svg{
+        position: absolute;
+        animation: fade 1.5s linear infinite;
+    }
+}
+
+.loader{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 4px solid transparent;
+    border-top: 4px solid var(--secondary);
+    border-right: 4px solid var(--secondary);
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    animation: spin 1.5s linear infinite;
+}

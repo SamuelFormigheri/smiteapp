@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    -webkit-font-smoothing: antialiased;
+    background: #000;
+}
+
+body, input, textarea, button {
+    font: 500 1rem Lato,sans-serif;
+    color: var(--white);
+}
+
+h1, h2, h3, h4, h5, h6{
+    color: var(--white);
+    font-weight: 700;
+    font-family: Lato, sans-serif;
+}
+
+h1{
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+h6 {
+    font-size: 0.9rem;
+}
+
+button{
+    cursor: pointer;
+}
+
+@media (max-width: 1080px) {
+    html {
+        font-size: 93.75%;
+    }
+}
+
+@media (max-width: 720px) {
+    html {
+        font-size: 87.5%;
+    }
+}
+
+:root{
+    --primary: #1C1E3F;
+    --secondary: #846531;
+
+    --yellow: #b89500;
+    --white: #CBF7FF;
+
+    --blue: #00A1F2;
+}

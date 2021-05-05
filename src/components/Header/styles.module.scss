@@ -1,0 +1,140 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+}
+
+.logo{
+    width: 300px;
+    background: transparent;
+    margin-left: 80px;
+}
+
+.info{
+    display: flex;
+    align-items: center;
+
+    @media(max-width: 1080px){
+        display: none;
+    }
+}
+
+.square{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--secondary);
+    margin: 5px;
+    cursor: pointer;
+    transition: 200ms ease;
+
+    &:hover{
+        border: 2px solid var(--secondary);
+        opacity: 0.75;
+    }
+}
+
+.character{
+    display: flex;
+    background: var(--primary);
+    border: 1px solid var(--secondary);
+    border-right: none;
+    padding: 2px;
+    min-width: 450px;
+}
+
+.profilePic{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    border: 1px solid var(--secondary);
+    margin-right: 10px;
+    width: 72px;
+    height: 72px;
+
+    cursor: pointer;
+    transition: 200ms ease;
+
+    >img{
+        width:70px;
+        height:70px;
+        transition: 200ms ease;
+    }
+
+    >svg{
+        opacity: 0;
+        position: absolute;
+        transition: 200ms ease;
+    }
+
+    &:hover{
+        border: 2px solid var(--secondary);
+        >svg{
+            opacity: 1;
+        }
+        >img{
+            opacity: 0.5;
+        }
+    }
+}
+
+.profileInfos{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.purchaseStats{
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.name{
+    color: var(--yellow);
+    font-weight: bold;
+    margin-bottom: 11px;
+}
+
+.imagePurchase{
+    display:flex;
+    align-items: center;
+    img{
+        width: 16px;
+        height: 16px;
+        margin-right: 5px;
+    }
+    & + &{
+        margin-left: 10px;
+    }
+}
+
+.xp{
+    position: relative;
+    display: flex;
+
+    >div:first-child{
+        height: 10px;
+        width: 300px;
+        border: 1px solid var(--secondary);
+        padding: 1px;
+    }
+
+    >div:last-child{
+        position: absolute;
+        right: 0;
+        top: -25px;
+        font-weight: bold;
+        color: var(--blue);
+    }
+}
+
+.progress{
+    background: var(--blue);
+    height: 100%;
+}

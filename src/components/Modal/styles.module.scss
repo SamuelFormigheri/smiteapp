@@ -1,0 +1,22 @@
+.overlay{
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+.modal{
+    display: flex;
+    transition: 200ms ease-in-out;
+    background: var(--primary);
+    border: 1px solid var(--secondary);
+    min-height: 10vh;
+    min-width: 10vw;
+}

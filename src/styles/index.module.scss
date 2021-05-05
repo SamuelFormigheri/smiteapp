@@ -1,0 +1,31 @@
+.homePage{
+    display:flex;
+
+    background: url('/landing.jpg');
+    width: 100vw;
+    height: 100vh;
+}
+
+.modalBody{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 300px;
+    height: 200px;
+    position: relative;
+    h4{
+        margin-bottom: 20px;
+    }
+    p{
+        font-size: 1.05rem;
+        color: var(--blue);
+        font-weight: 700;
+    }
+}
+
+.loaderContainer{
+    position: absolute; 
+    bottom: 5px;
+    right: 5px;
+}
