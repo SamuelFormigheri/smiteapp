@@ -1,0 +1,36 @@
+.home{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background: url('/background.jpg');
+}
+
+.content{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+.options{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0 0 80px;
+    span + span {
+        padding-top: 5px;
+    }
+}
+
+.godPreview{
+    display:flex;
+}
+
+.menu{
+    display:flex;
+}
+
+.footer{
+    display: flex;
+    height: 100px;
+}
