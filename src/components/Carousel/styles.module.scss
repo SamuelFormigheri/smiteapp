@@ -1,0 +1,82 @@
+.carouselContainer{
+    display: flex;
+    position: relative;
+    width: 100%;   
+    &:hover{
+        >svg{
+            opacity: 1;
+        }
+    }
+}
+
+.arrowLeft{
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    height: 100%;
+    width: 40px;
+    transition: 200ms ease;
+    left: 0;
+    
+    &:hover{
+        background: rgba(0, 0, 0, 0.5);
+    }
+}
+
+.arrowRight{
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    height: 100%;
+    width: 40px;
+    transition: 200ms ease;
+    right: 0;
+
+    
+    &:hover{
+        background: rgba(0, 0, 0, 0.5);
+    }
+}
+
+
+.carousel{
+    display: flex;
+    overflow-x: hidden;
+    scroll-snap-type:  x mandatory;
+    -webkit-overflow-scrolling: touch;
+
+    img{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 200ms ease;
+        
+        width: 100%;
+        height:100%;
+        object-fit: cover;
+        scroll-snap-align: start;
+    }
+}
+
+.diamonds{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+
+    position: absolute;
+    bottom: -22px;
+    left: 0;
+    width: 100%;
+
+    svg{
+        cursor: pointer;
+        stroke: var(--secondary);
+        stroke-width: 2px;
+
+        &:hover{
+            stroke: var(--yellow);
+        }
+    }
+}
+

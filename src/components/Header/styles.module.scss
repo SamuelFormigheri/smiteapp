@@ -10,6 +10,11 @@
     width: 300px;
     background: transparent;
     margin-left: 80px;
+
+    >img{
+        width: 300px;
+        object-fit: cover;
+    }
 }
 
 .info{
@@ -33,7 +38,7 @@
     transition: 200ms ease;
 
     &:hover{
-        border: 2px solid var(--secondary);
+        border: 1px solid var(--yellow);
         opacity: 0.75;
     }
 }

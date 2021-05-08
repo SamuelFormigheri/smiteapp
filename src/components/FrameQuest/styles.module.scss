@@ -1,0 +1,49 @@
+.quests{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.questExclamation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 100%;
+}
+
+.questDescription{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 320px;
+    flex: 1;
+
+    >h4{
+        color: var(--yellow);
+    }
+
+    >span{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.questPoints{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   width: 50px;
+   height: 100%; 
+}
+
+.progressBar{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--blue) 0%, var(--blue) 70%, var(--white) 100%);
+}

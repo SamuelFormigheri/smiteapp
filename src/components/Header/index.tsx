@@ -1,19 +1,16 @@
 import React from 'react';
-import Image from 'next/image';
 import {BiPlusMedical} from 'react-icons/bi';
 import {ImSearch} from 'react-icons/im';
+import Frame from '../Frame';
 import styles from './styles.module.scss';
 
 const Header: React.FC = () => {
   return (
       <div className={styles.header}>
           <div className={styles.logo}>
-            <Image 
-                width={1000} 
-                height={500} 
+            <img 
                 src="/logo.png" 
                 alt="Smite" 
-                objectFit="cover"
               />
           </div>
           <div className={styles.info}>
@@ -29,7 +26,7 @@ const Header: React.FC = () => {
             <div className={styles.square}>
                 <BiPlusMedical size={40} color="rgba(255,255,255,0.5)"/>
             </div>
-            <div className={styles.character}>
+            <Frame style={{padding: '2px', minWidth: '450px'}}>
                 <div className={styles.profilePic}>
                     <img src="/profilepic.png" alt="Avatar"/>
                     <ImSearch size={40} color="rgba(255,255,255,0.5)" />
@@ -53,7 +50,7 @@ const Header: React.FC = () => {
                         <div>86</div>  
                     </div>
                 </div>
-            </div>
+            </Frame>
           </div>
       </div>
   );
