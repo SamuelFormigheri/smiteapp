@@ -1,0 +1,30 @@
+.tooltip{
+    position: relative;
+
+    &:hover span{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.tooltipSpan{
+    background: var(--primary);
+    border: 2px solid var(--secondary);
+    padding: 8px;
+    font-size: 1.2rem;
+    font-weight: 700;
+
+    opacity: 0;
+    transition: 400ms;
+    visibility: hidden;
+
+    position: absolute;
+    bottom: calc(100% + 5px);
+    right: 0;
+    color: var(--secondary);
+
+    &:hover{
+        opacity: 0 !important;
+        visibility: hidden !important;
+    }
+}

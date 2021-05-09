@@ -8,6 +8,7 @@ import { IFrameQuest } from './interface';
 const FrameQuest: React.FC<IFrameQuest> = ({
     title,
     description,
+    percentComplete,
     points
 }) => {
   return (
@@ -24,7 +25,7 @@ const FrameQuest: React.FC<IFrameQuest> = ({
                 <GiCrackedHelm size={26} color="var(--yellow)" />
                 <span>{points}</span>
             </div>
-            <div className={styles.progressBar} style={{width: '50%'}} />
+            <div className={styles.progressBar} style={{width: `${percentComplete}%`}} />
         </div>
     </Frame>
   );

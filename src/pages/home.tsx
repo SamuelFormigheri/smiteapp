@@ -1,9 +1,16 @@
+import { FaExclamation } from 'react-icons/fa';
+import { BsGearFill, BsBellFill, BsGiftFill } from 'react-icons/bs';
+import { GiSwordsEmblem } from 'react-icons/gi';
+import { GoMortarBoard } from 'react-icons/go';
+import { HiUser, HiUsers } from 'react-icons/hi';
 import Frame from '../components/Frame';
 import Header from '../components/Header';
 import Title from '../components/Title';
 import styles from '../styles/home.module.scss';
 import FrameQuest from '../components/FrameQuest';
 import Carousel from '../components/Carousel';
+import Object3D from '../components/Object3D';
+import Tooltip from '../components/Tooltip';
 
 export default function Home() {
     return(
@@ -20,7 +27,7 @@ export default function Home() {
                 <Title>Cofre</Title>
             </div>
             <div className={styles.godPreview}>
-
+                {/* <Object3D src="/bee.glb" type="glb" /> */}
             </div>
             <div className={styles.menu}>
                 <Carousel 
@@ -85,22 +92,54 @@ export default function Home() {
                 <FrameQuest 
                     title="Passe de Batalha"
                     description="Acene para seu inimigo durante a partida em"
+                    percentComplete={0}
                     points={500}
                 />
                 <FrameQuest 
                     title="Passe de Batalha"
                     description="Jogue 2 partidas."
+                    percentComplete={50}
                     points={500}
                 />
                 <FrameQuest 
                     title="Passe de Batalha"
                     description='Diga três vezes "Você é demais" a um aliado'
+                    percentComplete={66}
                     points={500}
                 />
             </div>
         </div>
         <div className={styles.footer}>
+            <div className={styles.chat}>
 
+            </div>
+
+            <div className={styles.icons}>
+                <Tooltip title="Missões">
+                    <FaExclamation color="var(--secondary)" size={34} className={styles.svgPath} />
+                </Tooltip>
+                <Tooltip title="Centro de recompensas" style={{minWidth: '250px'}}>
+                    <BsGiftFill color="var(--secondary)" size={40} />
+                </Tooltip>
+                <Tooltip title="Lista de amigos" style={{minWidth: '200px'}}>
+                    <HiUsers color="var(--secondary)" size={40} />
+                </Tooltip>
+                <Tooltip title="O clã está atualmente indisponivel" style={{minWidth: '350px'}}>
+                    <GiSwordsEmblem color="var(--secondary)" size={40} className={styles.svgPath} style={{opacity: '0.5'}}/>
+                </Tooltip>
+                <Tooltip title="Aprenda">
+                    <GoMortarBoard color="var(--secondary)" size={40} />
+                </Tooltip>
+                <Tooltip title="Perfil">
+                    <HiUser color="var(--secondary)" size={40} />
+                </Tooltip>
+                <Tooltip title="Notificações">
+                    <BsBellFill color="var(--secondary)" size={34} />
+                </Tooltip>
+                <Tooltip title="Configurações">
+                    <BsGearFill color="var(--secondary)" size={40} style={{marginBottom: '6px'}}/>
+                </Tooltip>
+            </div>
         </div>
     </div>
     )
