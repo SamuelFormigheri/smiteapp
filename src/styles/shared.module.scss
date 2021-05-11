@@ -1,0 +1,50 @@
+.home{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background: url('/background.jpg');
+}
+
+.content{
+    display: flex;
+    flex: 1;
+    background: rgba(0, 0, 0, 0.125);
+}
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--secondary);
+    position: relative;
+    height: 100px;
+    background: rgba(0, 0, 0, 0.125);
+}
+
+.icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-self: flex-end;
+    width: 400px;
+
+    svg{
+        cursor: pointer;
+        stroke-width: 0.5px;
+        stroke: black;
+        transition: 200ms ease;
+
+        &:hover{
+            fill: var(--white);
+        }
+    }
+}
+
+.svgPath{
+    path{
+        stroke-width: 16px;
+        stroke: black;
+    }
+}

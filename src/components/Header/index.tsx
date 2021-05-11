@@ -2,11 +2,14 @@ import React from 'react';
 import {BiPlusMedical} from 'react-icons/bi';
 import {ImSearch} from 'react-icons/im';
 import Frame from '../Frame';
+import { IHeader } from './interface';
 import styles from './styles.module.scss';
 
-const Header: React.FC = () => {
+const Header: React.FC<IHeader> = ({
+    style
+}) => {
   return (
-      <div className={styles.header}>
+      <div className={styles.header} style={style} >
           <div className={styles.logo}>
             <img 
                 src="/logo.png" 

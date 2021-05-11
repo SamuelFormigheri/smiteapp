@@ -1,9 +1,10 @@
 import React, { useRef, useState } from 'react';
 import {IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
-import {ImDiamonds} from 'react-icons/im';
+import { v4 } from 'uuid';
 import styles from './styles.module.scss';
 import Frame from '../Frame';
 import { ICarousel } from './interface';
+import Diamond from '../Diamond';
 
 const Carousel: React.FC<ICarousel> = ({
     width,
@@ -63,7 +64,7 @@ const Carousel: React.FC<ICarousel> = ({
             />
             {diamonds && (
                 <div className={styles.diamonds}>
-                    {diamondsArray.map((_, index: number) => <ImDiamonds key={index} size={16} color="var(--primary)" fill={diamond === (index + 1) ? "var(--blue" : ""} onClick={() => handleChangeDiamond(index + 1)} /> )}
+                    {diamondsArray.map((_, index: number) => <Diamond key={v4()} size={16} color="var(--primary)" fill={diamond === (index + 1) ? "var(--blue" : ""} onClick={() => handleChangeDiamond(index + 1)} /> )}
                 </div>
             )}
         </div>

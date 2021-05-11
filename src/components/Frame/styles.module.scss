@@ -36,12 +36,12 @@
     }
 
     &:hover{
-        border: 2px solid var(--yellow);
+        border: 2px solid var(--white);
         border-right: none;
         
         &::after,
         &::before{
-            border-color: var(--yellow) transparent;
+            border-color: var(--white) transparent;
         }
     }
 }

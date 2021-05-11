@@ -1,0 +1,133 @@
+.chat{
+    display: flex;
+    align-items: center;
+    align-self: flex-end;
+    position: relative;
+    width: 680px;
+    border-bottom: 2px solid var(--secondary);
+    margin-bottom: 2px;
+}
+
+.historyChat{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+
+    position: absolute;
+    bottom: calc(100% + 2px);
+    left: 0;
+    width: 100%;
+    height: 300px;
+    background: rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+    transition: 200ms ease;
+}
+
+.messagesContainer{
+    display: flex;
+    margin-top: auto;
+}
+
+.message{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 5px;
+    font-size: 0.9rem;
+    color: var(--white);
+    >span{
+        margin: 0 5px;
+        color: var(--yellow);
+    }
+}
+
+.chatOn{
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 10px;
+    height: 30px;
+    width: 100px;
+    border: 2px solid var(--secondary);
+    background: var(--secondary);
+    font-weight: bold;
+    color: var(--white);
+    border-right: none;
+    transition: 200ms ease;
+
+    &:hover{
+        color: var(--primary);
+    }
+
+    &:after{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-top: 28px solid var(--primary);
+        border-left: 28px solid transparent;
+    }
+}
+
+.chatBar{
+    display: flex;
+    position: relative;
+    height: 30px;
+    flex: 1;
+    cursor: text;
+    border-top: 2px solid var(--secondary);
+    background: var(--primary);
+
+    &:hover{
+        input::placeholder{
+            color: var(--white);
+        }
+    }
+
+    &:after{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-top: 28px solid var(--secondary);
+        border-left: 28px solid transparent;
+    }
+
+    input{
+        background: transparent;
+        border: transparent;
+        user-select: none;
+        color: var(--white);
+        outline: none;
+        width: 100%;
+        padding-right: 20px;
+        &::placeholder{
+            transition: 200ms ease;
+        }
+    }
+}
+
+.chatIcon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 50px;
+    background: var(--secondary);
+    border-top-right-radius: 6px;
+    transition: 200ms ease;
+
+    svg{
+        transition: 200ms ease;
+    }
+
+    &:hover{
+        svg{
+            fill: var(--primary);
+        }
+    }
+}

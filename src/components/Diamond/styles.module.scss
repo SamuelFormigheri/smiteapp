@@ -1,0 +1,9 @@
+.diamond{
+    cursor: pointer;
+    stroke: var(--secondary);
+    stroke-width: 2px;
+
+    &:hover{
+        stroke: var(--yellow);
+    }
+}
