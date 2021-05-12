@@ -15,6 +15,11 @@ body, input, textarea, button {
     color: var(--white);
 }
 
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
 h1, h2, h3, h4, h5, h6{
     color: var(--white);
     font-weight: 700;
@@ -61,12 +66,34 @@ button{
     }
 }
 
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--secondary);
+  border-radius: 4px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(132, 101, 49, 0.8);
+}
+
 :root{
     --primary: #1C1E3F;
     --secondary: #846531;
+    --primary-dark: #0D0F2F;
 
+    --gray: #444445;
     --yellow: #b89500;
     --white: #CBF7FF;
-
     --blue: #00A1F2;
 }

@@ -1,11 +1,14 @@
 import React from 'react';
-import LoadContext from './LoadContext';
+import LoadContextProvider from './LoadContext';
+import HeaderContextProvider from './HeaderContext';
 
 const SharedContext: React.FC = ({children}) => {
   return (
-      <LoadContext>
+      <LoadContextProvider>
+        <HeaderContextProvider>
           {children}
-      </LoadContext>
+        </HeaderContextProvider>
+      </LoadContextProvider>
   );
 }
 

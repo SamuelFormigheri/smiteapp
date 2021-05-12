@@ -35,31 +35,21 @@ const Chat: React.FC = () => {
 
         document.addEventListener("click", handleClickOutside );
     }, [historyChat]);
-
-    useEffect(() => {
-        // Review Here
-        console.log(messages);
-    }, [messages]);
-    
+   
   return (
     <div ref={chatRef} className={styles.chat}>
         <div className={styles.historyChat} style={!historyChat ? { display: 'none' } : {} }>
             <div className={styles.messagesContainer}>
-                <div className={styles.message}>
-                    [08:32:11]
-                    <span>
-                        THecatonquiro :
-                    </span>
-                    O pai ta on!
-                </div>
                 {messages.length > 0 && messages.map((message) => {
-                    <div key={v4()} className={styles.message}>
-                        [{message.time}]
-                        <span>
-                            {message.author} :
-                        </span>
-                        {message.content}
-                    </div>
+                    return(
+                        <div key={v4()} className={styles.message}>
+                            [{message.time}]
+                            <span>
+                                {message.author} :
+                            </span>
+                            {message.content}
+                        </div>
+                    )
                 })}
             </div>
         </div>

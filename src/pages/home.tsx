@@ -1,4 +1,5 @@
 import Dynamic from 'next/dynamic';
+import Link from 'next/link'
 import Frame from '../components/Frame';
 import Title from '../components/Title';
 import styles from '../styles/home.module.scss';
@@ -20,7 +21,11 @@ export default function Home() {
     <div className={styles.content}>
         <div className={styles.options}>
             <Title size="big">JOGAR</Title>
-            <Title size="big">DEUSES</Title>
+            <Title size="big">
+                <Link href="/gods">
+                    <a>DEUSES</a>
+                </Link>
+            </Title>
             <Title size="big">LOJA</Title>
             <Title>Passe de Batalha: Heróis Animais</Title>
             <Title>E-Sports e Transmissões Ao Vivo</Title>

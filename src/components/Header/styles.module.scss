@@ -7,6 +7,7 @@
 }
 
 .logo{
+    position: relative;
     width: 300px;
     background: transparent;
     margin-left: 80px;
@@ -15,6 +16,27 @@
         width: 300px;
         object-fit: cover;
     }
+}
+
+.backArrow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    bottom: 30%;
+    left: -15%;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--blue) 0, var(--primary) 100%);
+    cursor: pointer;
+    transition: 200ms ease;
+
+    &:hover{
+        background: radial-gradient(circle, rgba(0,212,255,1) 0%, rgba(0,161,242,1) 40%, var(--primary) 100%);
+    }
+
 }
 
 .info{

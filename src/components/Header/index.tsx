@@ -1,6 +1,9 @@
 import React from 'react';
 import {BiPlusMedical} from 'react-icons/bi';
 import {ImSearch} from 'react-icons/im';
+import {IoMdArrowDropleft} from 'react-icons/io';
+import { useRouter } from 'next/router';
+import { useHeader } from '../../context/HeaderContext';
 import Frame from '../Frame';
 import { IHeader } from './interface';
 import styles from './styles.module.scss';
@@ -8,9 +11,21 @@ import styles from './styles.module.scss';
 const Header: React.FC<IHeader> = ({
     style
 }) => {
+  const {backArrow, hideBackArrow} = useHeader();
+  const router = useRouter();
   return (
       <div className={styles.header} style={style} >
           <div className={styles.logo}>
+            {backArrow && (
+                <div className={styles.backArrow}
+                    onClick={() => {
+                        router.back();
+                        hideBackArrow();
+                    }}
+                >
+                    <IoMdArrowDropleft color="var(--primary)" size={42} />
+                </div>
+            )}
             <img 
                 src="/logo.png" 
                 alt="Smite" 
