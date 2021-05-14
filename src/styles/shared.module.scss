@@ -31,7 +31,7 @@
     width: 400px;
 
     svg{
-        cursor: pointer;
+        cursor: url('/pointer.png'), pointer;
         stroke-width: 0.5px;
         stroke: black;
         transition: 200ms ease;

@@ -48,7 +48,7 @@
     max-width: 104px;
     border: 2px solid var(--secondary);
     margin: 8px;
-    cursor: pointer;
+    cursor: url('/pointer.png'), pointer;
     transition: 200ms ease;
 
     &:hover{

@@ -46,6 +46,11 @@
     @media (max-width: 1080px){
         display: none;
     }
+    @media (max-height: 850px){
+        >div:first-child{
+            margin-bottom: 20px;
+        }
+    }
 }
 
 

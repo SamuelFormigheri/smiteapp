@@ -30,7 +30,7 @@
     height: 36px;
     border-radius: 50%;
     background: radial-gradient(circle, var(--blue) 0, var(--primary) 100%);
-    cursor: pointer;
+    cursor: url('/pointer.png'), pointer;
     transition: 200ms ease;
 
     &:hover{
@@ -56,7 +56,7 @@
     height: 50px;
     border: 1px solid var(--secondary);
     margin: 5px;
-    cursor: pointer;
+    cursor: url('/pointer.png'), pointer;
     transition: 200ms ease;
 
     &:hover{
@@ -85,7 +85,7 @@
     width: 72px;
     height: 72px;
 
-    cursor: pointer;
+    cursor: url('/pointer.png'), pointer;
     transition: 200ms ease;
 
     >img{

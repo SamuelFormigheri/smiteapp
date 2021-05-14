@@ -8,6 +8,7 @@ body{
     -webkit-font-smoothing: antialiased;
     background: #000;
     user-select: none;
+    cursor: url('/cursor.png'), auto;
 }
 
 body, input, textarea, button {
@@ -50,8 +51,8 @@ h6 {
     font-size: 0.9rem;
 }
 
-button{
-    cursor: pointer;
+button, a{
+    cursor: url('/pointer.png'), pointer;
 }
 
 @media (max-width: 1080px) {
@@ -70,6 +71,7 @@ button{
     width: 6px;
     height: 6px;
 }
+
 
 /* Track */
 ::-webkit-scrollbar-track {
