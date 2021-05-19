@@ -20,7 +20,11 @@ export default function Home() {
     return(
     <div className={styles.content}>
         <div className={styles.options}>
-            <Title size="big">JOGAR</Title>
+            <Title size="big">
+                <Link href="/play">
+                    <a>JOGAR</a>
+                </Link>
+            </Title>
             <Title size="big">
                 <Link href="/gods">
                     <a>DEUSES</a>
