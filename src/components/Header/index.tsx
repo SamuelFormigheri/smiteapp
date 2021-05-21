@@ -44,7 +44,9 @@ const Header: React.FC<IHeader> = ({
             <div className={styles.square}>
                 <BiPlusMedical size={40} color="rgba(255,255,255,0.5)"/>
             </div>
-            <Frame style={{padding: '2px', minWidth: '450px'}}>
+            <Frame style={{padding: '2px', minWidth: '450px'}}
+                layout="no-border-right"
+            >
                 <div className={styles.profilePic}>
                     <img src="/profilepic.png" alt="Avatar"/>
                     <ImSearch size={40} color="rgba(255,255,255,0.5)" />

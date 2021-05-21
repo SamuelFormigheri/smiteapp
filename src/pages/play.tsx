@@ -1,5 +1,9 @@
 import { useEffect } from 'react';
+import { GiLaurelCrown } from 'react-icons/gi';
+import { IoMdTrophy } from 'react-icons/io';
+import CardList from '../components/CardList';
 import CardMode from '../components/CardMode';
+import Frame from '../components/Frame';
 import Tabs from '../components/Tabs';
 import { useHeader } from '../context/HeaderContext';
 import styles from '../styles/play.module.scss';
@@ -10,6 +14,8 @@ export default function Play(){
     useEffect(() => {
         showBackArrow();
     },[]);
+
+    // Catch data from normal modes and do the logic to change 
 
     return(
         <div className={styles.content}>
@@ -82,11 +88,110 @@ export default function Play(){
                       },{
                         id: 2,
                         title: "NORMAL",
-                        content: <> 
-                          <div>
-                            Normal
-                          </div>
-                        </>
+                        content: <div
+                            style={{
+                                display: 'flex',
+                                width: '100%',
+                                height: '100%',
+                                alignItems:'center',
+                                justifyContent: 'center'
+                            }}
+                        > 
+                            <Frame 
+                                style={{
+                                    width: '55%',
+                                    height: '100%',
+                                    margin: '4px',
+                                    flexDirection: 'column'
+                                }}
+                            >
+                                <CardList 
+                                    title="CONQUISTA"
+                                    firstWinOfDay
+                                />
+                                <CardList 
+                                    title="ARENA"
+                                    firstWinOfDay
+                                />
+                                <CardList 
+                                    title="COLISÃO"
+                                    firstWinOfDay
+                                />
+                                <CardList 
+                                    title="JUSTA"
+                                    firstWinOfDay
+                                />
+                                <CardList 
+                                    title="ASSALTO"
+                                    firstWinOfDay
+                                />
+                                <CardList 
+                                    title="CERCO"
+                                    firstWinOfDay
+                                />
+                                <CardList 
+                                    title="DUEL SIEGE"
+                                    firstWinOfDay
+                                />
+                            </Frame>
+                            
+                            <Frame
+                                style={{
+                                    width: '40%',
+                                    height: '100%',
+                                    margin: '4px',
+                                    flexDirection: 'column'    
+                                }}
+                            >
+                                <div className={styles.square}>
+                                    <img 
+                                        src='./assault.png'
+                                        alt="ASSALTO"
+                                    />
+                                </div>
+                                <span className={styles.title}>
+                                    ASSALTO
+                                </span>
+                                <span className={styles.subtitle}>
+                                    5X5
+                                </span>
+                                <span className={styles.text}>
+                                    Lorem ipsum dolor sit amet 
+                                    consectetur adipisicing elit.
+                                     Id quis maiores, ex eveniet 
+                                     nulla eius nostrum corrupti iusto 
+                                     impedit laudantium fuga, amet eum? 
+                                     Adipisci molestiae et accusamus porro 
+                                     facere quibusdam?
+                                </span>
+
+                                <span className={styles.subtitle}>
+                                    DISPONÍVEL PARA
+                                </span>
+
+                                <div style={{
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    margin: '10px'
+                                }}>
+                                    <IoMdTrophy  size={30} color="var(--yellow)"/>
+                                    <span className={styles.text}>
+                                        Mérito
+                                    </span>
+                                </div>
+
+                                <div style={{
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    margin: '10px'
+                                }}>
+                                    <GiLaurelCrown size={30} color="var(--green)"/>
+                                    <span className={styles.text}>
+                                        Primeira Vitória do Dia
+                                    </span>
+                                </div>
+                            </Frame>
+                        </div>
                       }
                     ]} 
                     startSelected={1}

@@ -134,7 +134,7 @@ export default function Home() {
                     alt="Deep" 
                 />
             </Carousel>
-            <Frame style={{width: '400px'}}>
+            <Frame style={{width: '400px'}} layout="no-border-right">
                 <img
                     src="/mothers-day.png"
                     alt="Mothers Day" 

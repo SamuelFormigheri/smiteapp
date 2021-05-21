@@ -4,7 +4,6 @@
 
     background: var(--primary);
     border: 2px solid var(--secondary);
-    border-right: none;
 
     min-height: 20px;
     min-width: 20px;
@@ -36,12 +35,15 @@
     }
 
     &:hover{
-        border: 2px solid var(--white);
-        border-right: none;
+        border-color: var(--white);
         
         &::after,
         &::before{
             border-color: var(--white) transparent;
         }
     }
+}
+
+.noBorderRight{
+    border-right: none;
 }

@@ -14,6 +14,7 @@
     &:hover{
         box-shadow: 0 0 4px 2px var(--white);
         transform: scale(1.05);
+        cursor: url('/pointer.png'), pointer;
     }
 }
 

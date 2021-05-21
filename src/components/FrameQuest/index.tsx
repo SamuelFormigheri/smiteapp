@@ -12,7 +12,9 @@ const FrameQuest: React.FC<IFrameQuest> = ({
     points
 }) => {
   return (
-    <Frame style={{width: '400px', minHeight: '65px'}}>
+    <Frame style={{width: '400px', minHeight: '65px'}}
+        layout="no-border-right"
+    >
         <div className={styles.quests}>
             <div className={styles.questExclamation}>
                 <FaExclamation size={26} color="var(--secondary)" />

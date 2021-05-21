@@ -49,7 +49,9 @@ const Carousel: React.FC<ICarousel> = ({
    };
 
   return (
-    <Frame style={{width: `${width}px`, height: `${height}px`}}>
+    <Frame style={{width: `${width}px`, height: `${height}px`}}
+        layout="no-border-right"
+    >
         <div className={styles.carouselContainer}>
             <IoIosArrowBack size={32} color="var(--white)" 
                 className={styles.arrowLeft}
