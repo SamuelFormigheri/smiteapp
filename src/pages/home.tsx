@@ -38,35 +38,35 @@ export default function Home() {
         </div>
         <div className={styles.godPreview}>
 
-            <Object3D src="/Plant.glb" alt="Mr. Plant" style={diamond !== 0 ? {display: 'none'} : {width: '100%', height: '100%', minWidth: '400px'}}/>
+            <Object3D src="/gods3d/Plant.glb" alt="Mr. Plant" style={diamond !== 0 ? {display: 'none'} : {width: '100%', height: '100%', minWidth: '400px'}}/>
             <Card 
                 title="Mr. Plant"
                 text="Nova aparência de Jormungandr"
                 style={diamond !== 0 ? {display: 'none'} : {position: 'absolute', bottom: '20%'}}
             />
 
-            <Object3D src="/Troll.glb" alt="Troll Vamana" style={diamond !== 1 ? {display: 'none'} : {width: '100%', height: '50%', minWidth: '400px'}}/>
+            <Object3D src="/gods3d/Troll.glb" alt="Troll Vamana" style={diamond !== 1 ? {display: 'none'} : {width: '100%', height: '50%', minWidth: '400px'}}/>
             <Card 
                 title="Vamana Troll"
                 text="Nova aparência de Vamana"
                 style={diamond !== 1 ? {display: 'none'} : {position: 'absolute', bottom: '20%'}}
             />
 
-            <Object3D src="/Merlin.glb" alt="Merlin HQ" style={diamond !== 2 ? {display: 'none'} : {width: '100%', height: '60%', minWidth: '400px'}}/>
+            <Object3D src="/gods3d/Merlin.glb" alt="Merlin HQ" style={diamond !== 2 ? {display: 'none'} : {width: '100%', height: '60%', minWidth: '400px'}}/>
             <Card 
                 title="Merlin HQ"
                 text="Nova aparência de Merlin"
                 style={diamond !== 2 ? {display: 'none'} : {position: 'absolute', bottom: '20%'}}
             />
 
-            <Object3D src="/Octopus.glb" alt="Polvo Malabaris" style={diamond !== 3 ? {display: 'none'} : {width: '100%', height: '100%', minWidth: '400px'}}/>
+            <Object3D src="/gods3d/Octopus.glb" alt="Polvo Malabaris" style={diamond !== 3 ? {display: 'none'} : {width: '100%', height: '100%', minWidth: '400px'}}/>
             <Card 
                 title="Polvo Malabaris"
                 text="Nova aparência de Cthulhu"
                 style={diamond !== 3 ? {display: 'none'} : {position: 'absolute', bottom: '20%'}}
             />
 
-            <Object3D src="/Dog.glb" alt="Dodge" style={diamond !== 4 ? {display: 'none'} : {width: '100%', height: '50%', minWidth: '400px'}}/>
+            <Object3D src="/gods3d/Dog.glb" alt="Dodge" style={diamond !== 4 ? {display: 'none'} : {width: '100%', height: '50%', minWidth: '400px'}}/>
             <Card 
                 title="Dodge"
                 text="Nova aparência de Ratatoskr"
@@ -90,53 +90,53 @@ export default function Home() {
                 diamonds
             >
                 <img
-                    src="/mistic-chest.png"
+                    src="/homeframes/mistic-chest.png"
                     alt="Mystic Chest" 
                 />
                 <img
-                    src="/distant-worlds-chest.png"
+                    src="/homeframes/distant-worlds-chest.png"
                     alt="Distant Worlds" 
                 />
                 <img 
-                    src="/talons-of-tirany-event.png"
+                    src="/homeframes/talons-of-tirany-event.png"
                     alt="Talons of Tirany" 
                 />
                 <img 
-                    src="/groove-chest.png"
+                    src="/homeframes/groove-chest.png"
                     alt="Groove Chest" 
                 />
                 <img 
-                    src="/talons-of-tirany.png"
+                    src="/homeframes/talons-of-tirany.png"
                     alt="Talons of Tirany" 
                 />
                 <img 
-                    src="/animal-heroes.png"
+                    src="/homeframes/animal-heroes.png"
                     alt="Animal Heroes" 
                 />
                 <img 
-                    src="/battle-pass-2021.png"
+                    src="/homeframes/battle-pass-2021.png"
                     alt="Battle Pass 2021" 
                 />
                 <img 
-                    src="/run-by-the-world-chest.png"
+                    src="/homeframes/run-by-the-world-chest.png"
                     alt="Run by the World" 
                 />
                 <img 
-                    src="/prime-gaming.png"
+                    src="/homeframes/prime-gaming.png"
                     alt="Prime Gaming" 
                 />
                 <img 
-                    src="/merchandising.png"
+                    src="/homeframes/merchandising.png"
                     alt="Merchandising" 
                 />
                 <img 
-                    src="/deep-chest.png"
+                    src="/homeframes/deep-chest.png"
                     alt="Deep" 
                 />
             </Carousel>
             <Frame style={{width: '400px'}} layout="no-border-right">
                 <img
-                    src="/mothers-day.png"
+                    src="/homeframes/mothers-day.png"
                     alt="Mothers Day" 
                     className={styles.frameImages}
                 />

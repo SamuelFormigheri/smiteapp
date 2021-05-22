@@ -13,8 +13,6 @@
     align-content: stretch;
 
     flex: 1;
-    width: 100%;
-    max-width: 502px;
     max-height: 280px;
     border: 1px solid var(--secondary);
     margin: 8px;
@@ -36,7 +34,7 @@
     font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: 1px;
-    margin: 8px;
+    margin: 2px 8px;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
@@ -47,11 +45,36 @@
     letter-spacing: 1px;
     font-weight: 700;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+    @media(max-width: 1420px){
+        display: none;
+    }
 }
 
 .text{
     font-size: 1rem;
-    margin: 8px;
+    margin: 2px 8px;
     color: var(--white);
     opacity: 0.5;
+}
+
+.availableFor{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 4px 20px;
+
+    @media(max-width: 1420px){
+        display: none;
+    }
+}
+
+.buttonContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 100%;
 }

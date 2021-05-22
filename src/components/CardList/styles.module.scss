@@ -28,3 +28,8 @@
         cursor: url('/pointer.png'), pointer;
     }
 }
+
+.selected{
+    background: linear-gradient(90deg, var(--primary) 0%, var(--white) 50%, var(--primary) 100%);
+    opacity: 0.8;
+}

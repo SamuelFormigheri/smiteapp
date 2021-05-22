@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { v4 } from 'uuid';
 import { ITabs } from './interface';
 import styles from './styles.module.scss';
@@ -8,15 +8,6 @@ const Tabs: React.FC<ITabs> = ({
   startSelected
 }) => {
   const [tabSelected, setTabSelected] = useState(startSelected);
-
-  const tabContent = useMemo(() => {
-    const {content} = tabs.find(x => x.id === tabSelected);
-    return (
-      <div className={styles.tabsContent}>
-        {content}
-      </div>
-    )
-  },[tabSelected]);
 
   return (
       <div className={styles.tabsContainer}>
@@ -29,7 +20,13 @@ const Tabs: React.FC<ITabs> = ({
               )
             })}
           </div>
-          {tabContent}
+          {tabs.map(tab => (
+            <div key={v4()} className={styles.tabsContent}
+              style={{display: tabSelected === tab.id ? 'flex' : 'none'}}
+            >
+              {tab.content}
+            </div>)
+          )}
       </div>
   );
 }

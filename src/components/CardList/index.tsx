@@ -5,9 +5,11 @@ import { ICardList } from './interface';
 
 const CardList: React.FC<ICardList> = ({
     title,
-    firstWinOfDay
+    firstWinOfDay,
+    onClick,
+    selected
 }) => {
-  return <div className={styles.cardListContent}>
+  return <div className={`${styles.cardListContent} ${ selected && styles.selected}`} onClick={() => onClick()}>
       <div style={{
           display: 'flex',
           alignItems: 'center'
