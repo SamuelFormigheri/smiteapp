@@ -10,6 +10,16 @@
 
     transition: 200ms ease;
 
+    &:hover{
+        border-color: var(--white);
+    }
+}
+
+.noBorderRight{
+    border-right: none;
+}
+
+.sharpEdges{
     &::after{
         content: '';
         transition: 200ms ease;
@@ -35,15 +45,9 @@
     }
 
     &:hover{
-        border-color: var(--white);
-        
         &::after,
         &::before{
             border-color: var(--white) transparent;
         }
     }
-}
-
-.noBorderRight{
-    border-right: none;
 }

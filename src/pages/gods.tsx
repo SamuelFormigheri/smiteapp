@@ -33,7 +33,9 @@ export default function Gods() {
                 maxHeight: '600px',
                 borderRight: '2px solid var(--secondary)',
                 flexDirection: 'column'
-            }}>
+            }}
+                layout="no-sharp-edges"
+            >
                 <form onSubmit={handleSubmitFilter} className={styles.controls}>
                     <input 
                         ref={inputRef}

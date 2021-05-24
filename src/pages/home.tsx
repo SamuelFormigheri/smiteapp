@@ -30,7 +30,11 @@ export default function Home() {
                     <a>DEUSES</a>
                 </Link>
             </Title>
-            <Title size="big">LOJA</Title>
+            <Title size="big">
+                <Link href="/store">
+                    <a>LOJA</a>
+                </Link>
+            </Title>
             <Title>Passe de Batalha: Heróis Animais</Title>
             <Title>E-Sports e Transmissões Ao Vivo</Title>
             <Title>Garras da Tirania</Title>
@@ -88,6 +92,9 @@ export default function Home() {
                 max= {11}
                 start= {1}
                 diamonds
+                frame={{
+                    layout: "no-border-right"
+                }}
             >
                 <img
                     src="/homeframes/mistic-chest.png"

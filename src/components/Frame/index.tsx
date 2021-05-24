@@ -7,6 +7,7 @@ const Frame: React.FC<IFrame> = ({style, layout, children}) => {
       className={`
         ${styles.frame} 
         ${layout === 'no-border-right' && styles.noBorderRight}
+        ${layout !== 'no-sharp-edges' && styles.sharpEdges}
       `} 
       style={style}
     >{children}</div>;
