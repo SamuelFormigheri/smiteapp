@@ -204,7 +204,9 @@ export default function Play(){
                                     margin: '4px',
                                     flexDirection: 'column'
                                 }}
-                                layout="no-sharp-edges"
+                                layout={{
+                                    noSharpEdges: true
+                                }}
                             >
                                 <CardList 
                                     title="CONQUISTA"

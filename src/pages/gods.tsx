@@ -34,7 +34,9 @@ export default function Gods() {
                 borderRight: '2px solid var(--secondary)',
                 flexDirection: 'column'
             }}
-                layout="no-sharp-edges"
+                layout={{
+                    noSharpEdges: true
+                }}
             >
                 <form onSubmit={handleSubmitFilter} className={styles.controls}>
                     <input 
@@ -48,13 +50,19 @@ export default function Gods() {
                 <div className={styles.list}>
                     {gods.map((char) => {
                         return(
-                            <div key={v4()} className={styles.square}>
+                            <Frame
+                                key={v4()}
+                                layout={{
+                                    square: true,
+                                    noSharpEdges: true
+                                }}
+                            >
                                 <img 
                                     src={`/characters/${char.src}`}
                                     alt={char.name}
                                 />
                                 <span>{char.name}</span>
-                            </div>
+                            </Frame>
                         )
                     })}
 

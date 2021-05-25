@@ -93,7 +93,9 @@ export default function Home() {
                 start= {1}
                 diamonds
                 frame={{
-                    layout: "no-border-right"
+                    layout: {
+                        noBorderRight: true
+                    }
                 }}
             >
                 <img
@@ -141,7 +143,9 @@ export default function Home() {
                     alt="Deep" 
                 />
             </Carousel>
-            <Frame style={{width: '400px'}} layout="no-border-right">
+            <Frame style={{width: '400px'}} layout={{
+                noBorderRight: true
+            }}>
                 <img
                     src="/homeframes/mothers-day.png"
                     alt="Mothers Day" 

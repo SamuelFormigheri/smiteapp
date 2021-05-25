@@ -34,36 +34,3 @@
         flex: 1;
     }
 }
-
-.square{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    align-content: stretch;
-
-    flex: 1;
-    width: 102px;
-    height: 102px;
-    max-width: 104px;
-    border: 2px solid var(--secondary);
-    margin: 8px;
-    cursor: url('/pointer.png'), pointer;
-    transition: 200ms ease;
-
-    &:hover{
-        border: 2px solid var(--yellow);
-        opacity: 0.75;
-        >span{
-            color: var(--white);
-        }
-    }
-
-    >span{
-        position: absolute;
-        transition: 200ms ease;
-        bottom: 5px;
-        color: var(--yellow);
-        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    }
-}

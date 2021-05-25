@@ -35,7 +35,9 @@ export default function Store(){
                                     margin: '4px',
                                     justifyContent: 'space-evenly'
                                 }}
-                                layout="no-sharp-edges"
+                                layout={{
+                                    noSharpEdges: true
+                                }}
                             >
                                 <div
                                     style={{ 
@@ -53,7 +55,9 @@ export default function Store(){
                                         start= {1}
                                         diamonds
                                         frame={{
-                                            layout: 'no-sharp-edges'
+                                            layout: {
+                                                noSharpEdges: true
+                                            }
                                         }}
                                     >
                                         <img
@@ -104,19 +108,25 @@ export default function Store(){
                                     }}
                                 >
                                     <Frame
-                                        layout="no-sharp-edges"
+                                        layout={{
+                                            noSharpEdges: true
+                                        }}
                                         style={{margin: '5px'}}
                                     >
                                         <img className={styles.image} src="/storeframes/storeframe.png" alt="Chang'e" />
                                     </Frame>
                                     <Frame
-                                        layout="no-sharp-edges"
+                                        layout={{
+                                            noSharpEdges: true
+                                        }}
                                         style={{margin: '5px'}}
                                     >
                                         <img className={styles.image} src="/storeframes/storeframe2.png" alt="Ah Puach" />
                                     </Frame>
                                     <Frame
-                                        layout="no-sharp-edges"
+                                        layout={{
+                                            noSharpEdges: true
+                                        }}
                                         style={{margin: '5px'}}
                                     >
                                         <img className={styles.image} src="/storeframes/storeframe3.png" alt="Sunna" />
@@ -140,7 +150,9 @@ export default function Store(){
                                     margin: '4px',
                                     justifyContent: 'space-evenly'
                                 }}
-                                layout="no-sharp-edges"
+                                layout={{
+                                    noSharpEdges: true
+                                }}
                             >
                                 <div
                                     className={styles.weekSales}
@@ -165,7 +177,9 @@ export default function Store(){
                                         justifyContent: 'space-between'
                                     }}>
                                         <Frame
-                                            layout="no-sharp-edges"
+                                            layout={{
+                                                noSharpEdges: true
+                                            }}
                                         >
                                             <img
                                                 className={styles.image}
@@ -174,7 +188,9 @@ export default function Store(){
                                             />
                                         </Frame>
                                         <Frame
-                                            layout="no-sharp-edges"
+                                            layout={{
+                                                noSharpEdges: true
+                                            }}
                                         >
                                             <img
                                                 className={styles.image}
@@ -183,7 +199,9 @@ export default function Store(){
                                             />
                                         </Frame>
                                         <Frame
-                                            layout="no-sharp-edges"
+                                            layout={{
+                                                noSharpEdges: true
+                                            }}
                                         >
                                             <img
                                                 className={styles.image}
@@ -201,7 +219,9 @@ export default function Store(){
                                         PACOTES DIÁRIOS 
                                     </span>
                                     <Frame
-                                        layout="no-sharp-edges"
+                                        layout={{
+                                            noSharpEdges: true
+                                        }}
                                         style={{margin: '10px'}}
                                     >
                                         <img
@@ -211,7 +231,9 @@ export default function Store(){
                                         />
                                     </Frame>
                                     <Frame
-                                        layout="no-sharp-edges"
+                                        layout={{
+                                            noSharpEdges: true
+                                        }}
                                         style={{margin: '10px'}}
                                     >
                                         <img

@@ -1,5 +1,9 @@
 export interface IFrame{
     className?: string;
     style?: React.CSSProperties;
-    layout?: 'no-border-right' | 'no-sharp-edges';
+    layout?: {
+        noBorderRight?: boolean;  
+        noSharpEdges?: boolean;
+        square?: boolean;
+    };
 }

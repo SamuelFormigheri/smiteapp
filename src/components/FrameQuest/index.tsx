@@ -13,7 +13,9 @@ const FrameQuest: React.FC<IFrameQuest> = ({
 }) => {
   return (
     <Frame style={{width: '400px', minHeight: '65px'}}
-        layout="no-border-right"
+        layout={{
+            noBorderRight: true
+        }}
     >
         <div className={styles.quests}>
             <div className={styles.questExclamation}>

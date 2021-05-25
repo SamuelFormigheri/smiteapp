@@ -32,20 +32,42 @@ const Header: React.FC<IHeader> = ({
               />
           </div>
           <div className={styles.info}>
-            <div className={styles.square}>
+            <Frame layout={{ square: true, noSharpEdges: true }}
+                style={{
+                    width: "50px",
+                    height: "50px"
+                }}
+            >
                 <BiPlusMedical size={40} color="rgba(255,255,255,0.5)"/>
-            </div>
-            <div className={styles.square}>
+            </Frame>
+            <Frame layout={{ square: true, noSharpEdges: true }}
+                style={{
+                    width: "50px",
+                    height: "50px"
+                }}
+            >
                 <BiPlusMedical size={40} color="rgba(255,255,255,0.5)"/>
-            </div>
-            <div className={styles.square}>
+            </Frame>
+            <Frame layout={{ square: true, noSharpEdges: true }}
+                style={{
+                    width: "50px",
+                    height: "50px"
+                }}
+            >
                 <BiPlusMedical size={40} color="rgba(255,255,255,0.5)"/>
-            </div>
-            <div className={styles.square}>
+            </Frame>
+            <Frame layout={{ square: true, noSharpEdges: true }}
+                style={{
+                    width: "50px",
+                    height: "50px"
+                }}
+            >
                 <BiPlusMedical size={40} color="rgba(255,255,255,0.5)"/>
-            </div>
+            </Frame>
             <Frame style={{padding: '2px', minWidth: '450px'}}
-                layout="no-border-right"
+                layout={{
+                    noBorderRight: true
+                }}
             >
                 <div className={styles.profilePic}>
                     <img src="/profilepic.png" alt="Avatar"/>
