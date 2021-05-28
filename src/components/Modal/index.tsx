@@ -1,27 +1,35 @@
-import React, { forwardRef, useImperativeHandle, useState } from 'react';
+import React, { forwardRef, useEffect, useImperativeHandle, useRef, useState } from 'react';
+import useComponentVisible from '../../hooks/useVisible';
 import { IModal, IRefModal } from './interface';
 import styles from './styles.module.scss';
 
 const Modal: React.ForwardRefRenderFunction<IRefModal, IModal> = ({
-    children
+    children,
+    outsideClick,
+    escKey,
+    style
 }, ref) => {
-  const [visible, setVisible] = useState(false);
+  const { ref : modalRef, isVisible, setIsVisible } = useComponentVisible({
+      visible: false,
+      escKey,
+      outsideClick
+  })
 
-  const closeModal = () => setVisible(false);
+  const closeModal = () => setIsVisible(false);
   
-  const openModal = () => setVisible(true);
+  const openModal = () => setIsVisible(true);
 
   useImperativeHandle(ref, () => ({
       closeModal,
       openModal
   }));
 
-  if(!visible)
+  if(!isVisible)
     return null;
 
   return (
       <div className={styles.overlay}>
-          <div className={styles.modal}>
+          <div className={styles.modal} style={style} ref={modalRef}>
               {children}
           </div>
       </div>

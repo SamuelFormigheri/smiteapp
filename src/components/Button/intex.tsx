@@ -5,10 +5,11 @@ import styles from './styles.module.scss';
 const Button: React.FC<IButton> = ({
     style,
     children,
+    layout,
     type,
     ...rest
 }) => {
-  return <button className={styles.button} type={type || "button"} {...rest} style={style}>{children}</button>;
+  return <button className={`${styles.button} ${layout === 'secondary' && styles.secondary}`} type={type || "button"} {...rest} style={style}>{children}</button>;
 }
 
 export default Button;

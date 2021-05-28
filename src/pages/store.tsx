@@ -174,7 +174,8 @@ export default function Store(){
                                     <div style={{
                                         display: 'flex',
                                         alignItems: 'center',
-                                        justifyContent: 'space-between'
+                                        justifyContent: 'space-between',
+                                        flex: 1
                                     }}>
                                         <Frame
                                             layout={{

@@ -38,7 +38,6 @@
 .weekSales{
     display: flex;
     width: 80%;
-    justify-content: center;
     padding: 5px;
     flex-direction: column;
     max-width: 1080px;
@@ -51,7 +50,7 @@
     display: flex;
     width: 20%;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     flex-direction: column;
     position: relative;
 
