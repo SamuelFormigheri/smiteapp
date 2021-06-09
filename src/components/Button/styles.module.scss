@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: center;
     padding: 4px 10px;
-    background: linear-gradient(90deg, transparent 0%, rgba(0, 161, 242, 0.4) 35%, rgba(0, 161, 242, 0.6) 50%, rgba(0, 161, 242, 0.4) 65%, transparent 100%);
+    background: linear-gradient(90deg,rgba(0, 161, 242, 0.4) 0%, rgba(0, 161, 242, 0.6) 50%, rgba(0, 161, 242, 0.4) 100%);
     border: 1px solid var(--secondary);
     color: var(--white);
     font-weight: 700;
@@ -18,12 +18,23 @@
 }
 
 .secondary{
-    background: linear-gradient(90deg, transparent 0%, rgba(28, 30, 63, 0.6) 10%, rgba(0, 161, 242, 0.25) 50%, rgba(28, 30, 63, 0.6) 90%, transparent 100%);
+    background: linear-gradient(90deg, rgba(28, 30, 63, 0.6) 0%, rgba(0, 161, 242, 0.25) 50%, rgba(28, 30, 63, 0.6)  100%);
     border: 1px solid var(--secondary);
     color: var(--secondary);
 
     &:hover{
         background: linear-gradient(90deg, rgba(28, 30, 63, 0.4) 0%, rgba(203, 247, 255, 0.25) 50%, rgba(28, 30, 63, 0.4) 100%);
+        cursor: url('/pointer.png'), pointer;
+    }
+}
+
+.yellow{
+    background: linear-gradient(90deg,rgba(132, 101, 49, 0.6) 0%, rgba(132, 101, 49, 0.8)  50%, rgba(132, 101, 49, 0.6) 100%);
+    border: 1px solid var(--secondary);
+    color: var(--white);
+
+    &:hover{
+        background: linear-gradient(90deg, rgba(184, 149, 0, 0.6) 0%, rgba(132, 101, 49, 0.8) 50%, rgba(184, 149, 0, 0.6) 100%);
         cursor: url('/pointer.png'), pointer;
     }
 }

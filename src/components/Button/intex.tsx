@@ -9,7 +9,11 @@ const Button: React.FC<IButton> = ({
     type,
     ...rest
 }) => {
-  return <button className={`${styles.button} ${layout === 'secondary' && styles.secondary}`} type={type || "button"} {...rest} style={style}>{children}</button>;
+  return <button className={`
+    ${styles.button} 
+    ${layout === 'secondary' && styles.secondary}
+    ${layout === 'yellow' && styles.yellow}
+  `} type={type || "button"} {...rest} style={style}>{children}</button>;
 }
 
 export default Button;

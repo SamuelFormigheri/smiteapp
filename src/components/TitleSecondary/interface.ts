@@ -1,6 +1,6 @@
 import React from "react";
 
 export interface ITitle{
-    size?: 'default' | 'big';
+    type?: 'title' | 'subtitle';
     style?: React.CSSProperties;
 }

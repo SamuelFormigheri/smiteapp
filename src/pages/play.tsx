@@ -5,7 +5,9 @@ import Button from '../components/Button/intex';
 import CardList from '../components/CardList';
 import CardMode from '../components/CardMode';
 import Frame from '../components/Frame';
+import Hidden from '../components/Hidden';
 import Tabs from '../components/Tabs';
+import TitleSecondary from '../components/TitleSecondary';
 import { useHeader } from '../context/HeaderContext';
 import styles from '../styles/play.module.scss';
 
@@ -76,22 +78,25 @@ export default function Play(){
                        alt={mode.title}
                    />
                </div>
-               <span className={styles.title}>
+               <TitleSecondary>
                    {mode.title}
-               </span>
-               <span className={styles.subtitle}>
-                   {mode.numberOfPlayers}
-               </span>
+               </TitleSecondary>
+               <Hidden xl lg sm md xs>
+                    <TitleSecondary type="subtitle">
+                        {mode.numberOfPlayers}
+                    </TitleSecondary>
+               </Hidden>
                <span className={styles.text}>
                    {mode.descriptionTitle}
                </span>
                <span className={styles.text}>
                    {mode.description}
                </span>
-
-               <span className={styles.subtitle}>
-                   DISPONÍVEL PARA
-               </span>
+                <Hidden xl lg sm md xs>
+                    <TitleSecondary type="subtitle">
+                        DISPONÍVEL PARA
+                    </TitleSecondary>
+                </Hidden>
 
                <div className={styles.availableFor}>
                    <div style={{display: 'flex', alignItems: 'center'}}>
@@ -109,7 +114,7 @@ export default function Play(){
                </div>
 
                <div className={styles.buttonContainer}>
-                   <Button style={{padding: '4px 80px'}}>
+                   <Button style={{padding: '4px 30%'}}>
                        Jogar
                    </Button>
                </div>

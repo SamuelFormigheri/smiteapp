@@ -1,0 +1,25 @@
+.xl{
+    @media(min-width: 1200px) and (max-width: 1420px){
+        display: none;
+    }
+}
+.lg{
+    @media(min-width: 992px) and (max-width: 1200px){
+        display: none;
+    }
+}
+.md{
+    @media(min-width: 768px) and (max-width: 992px){
+        display: none;
+    }
+}
+.sm{
+    @media(min-width: 500px) and (max-width: 768px){
+        display: none;
+    }
+}
+.xs{
+    @media(max-width: 500px){
+        display: none;
+    }
+}
