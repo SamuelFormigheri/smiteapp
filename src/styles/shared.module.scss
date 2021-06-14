@@ -31,10 +31,10 @@
     width: 400px;
 
     svg{
-        cursor: url('/pointer.png'), pointer;
+        cursor: pointer;
         stroke-width: 0.5px;
         stroke: black;
-        transition: 200ms ease;
+        transition: 100ms ease;
 
         &:hover{
             fill: var(--white);

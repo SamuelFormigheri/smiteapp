@@ -11,11 +11,11 @@
 
 .arrowLeft{
     position: absolute;
-    cursor: url('/pointer.png'), pointer;
+    cursor: pointer;
     opacity: 0;
     height: 100%;
     width: 40px;
-    transition: 200ms ease;
+    transition: 100ms ease;
     left: 0;
     
     &:hover{
@@ -25,11 +25,11 @@
 
 .arrowRight{
     position: absolute;
-    cursor: url('/pointer.png'), pointer;
+    cursor: pointer;
     opacity: 0;
     height: 100%;
     width: 40px;
-    transition: 200ms ease;
+    transition: 100ms ease;
     right: 0;
 
     
@@ -49,7 +49,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        transition: 200ms ease;
+        transition: 100ms ease;
         
         width: 100%;
         height:100%;
@@ -70,7 +70,7 @@
     width: 100%;
 
     svg{
-        cursor: url('/pointer.png'), pointer;
+        cursor: pointer;
         stroke: var(--secondary);
         stroke-width: 2px;
 

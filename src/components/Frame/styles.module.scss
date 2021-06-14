@@ -8,7 +8,7 @@
     min-height: 20px;
     min-width: 20px;
 
-    transition: 200ms ease;
+    transition: 100ms ease;
 
     &:hover{
         border-color: var(--white);
@@ -22,7 +22,7 @@
 .sharpEdges{
     &::after{
         content: '';
-        transition: 200ms ease;
+        transition: 100ms ease;
         border-style: solid;
         border-color: var(--secondary) transparent;
         border-width: 3px 6px 0 4px;
@@ -34,7 +34,7 @@
 
     &::before{
         content: '';
-        transition: 200ms ease;
+        transition: 100ms ease;
         border-style: solid;
         border-color: var(--secondary) transparent;
         border-width: 3px 6px 0 4px;
@@ -65,8 +65,8 @@
     max-width: 104px;
     border: 2px solid var(--secondary);
     margin: 8px;
-    cursor: url('/pointer.png'), pointer;
-    transition: 200ms ease;
+    cursor: pointer;
+    transition: 100ms ease;
 
     &:hover{
         border: 2px solid var(--yellow);
@@ -78,7 +78,7 @@
 
     >span{
         position: absolute;
-        transition: 200ms ease;
+        transition: 100ms ease;
         bottom: 5px;
         color: var(--yellow);
         text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;

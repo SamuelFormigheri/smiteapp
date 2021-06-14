@@ -30,8 +30,8 @@
     height: 36px;
     border-radius: 50%;
     background: radial-gradient(circle, var(--blue) 0, var(--primary) 100%);
-    cursor: url('/pointer.png'), pointer;
-    transition: 200ms ease;
+    cursor: pointer;
+    transition: 100ms ease;
 
     &:hover{
         background: radial-gradient(circle, rgba(0,212,255,1) 0%, rgba(0,161,242,1) 40%, var(--primary) 100%);
@@ -68,19 +68,19 @@
     width: 72px;
     height: 72px;
 
-    cursor: url('/pointer.png'), pointer;
-    transition: 200ms ease;
+    cursor: pointer;
+    transition: 100ms ease;
 
     >img{
         width:70px;
         height:70px;
-        transition: 200ms ease;
+        transition: 100ms ease;
     }
 
     >svg{
         opacity: 0;
         position: absolute;
-        transition: 200ms ease;
+        transition: 100ms ease;
     }
 
     &:hover{
