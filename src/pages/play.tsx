@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { useEffect, useMemo, useState } from 'react';
 import { GiLaurelCrown } from 'react-icons/gi';
 import { IoMdTrophy } from 'react-icons/io';
@@ -72,6 +73,9 @@ export default function Play(){
     const NormalTabFrameMode = useMemo(() => {
         return (
             <>
+               <Head>
+                   <title>Jogar | Smite</title>
+               </Head>
                <div className={styles.square}>
                    <img 
                        src={mode.src}

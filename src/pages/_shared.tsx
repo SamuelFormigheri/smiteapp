@@ -14,6 +14,7 @@ import Button from '../components/Button/intex';
 import Tabs from '../components/Tabs';
 import Frame from '../components/Frame';
 import TitleSecondary from '../components/TitleSecondary';
+import CardNotification from '../components/CardNotification';
 
 export default function Shared({
     children
@@ -60,6 +61,7 @@ export default function Shared({
                 </Tooltip>
             </div>
         </div>
+        {/* Modal Config */}
         <Modal
             ref={modalConfig}
             outsideClick={true}
@@ -84,6 +86,7 @@ export default function Shared({
 
             </div>
         </Modal>
+        {/* Modal Notification */}
         <Modal
             ref={modalNotifications}
             outsideClick={true}
@@ -101,6 +104,13 @@ export default function Shared({
                     tabs={[{
                         id: 1,
                         title: "NOTIFICAÇÕES",
+                        content: <>
+                            
+                        </>
+                    },
+                    {
+                        id: 2,
+                        title: "DESTRAVADOS",
                         content: <div style={{
                             display: 'flex',
                             flexDirection: 'column',
@@ -110,12 +120,14 @@ export default function Shared({
                             <div style={{
                                 display: 'flex',
                                 alignItems: 'center',
-                                justifyContent: 'space-between'
+                                justifyContent: 'space-between',
+                                padding: '0 0 5px 0',
+                                borderBottom: '1px solid var(--secondary)'
                             }}>
-                                <span>
+                                <span style={{width: "300px"}}>
                                     ITEM
                                 </span>
-                                <span>
+                                <span style={{width: "300px"}}>
                                     DISPONÍVEL EM
                                 </span>
                                 <Button
@@ -126,98 +138,119 @@ export default function Shared({
                                 </Button>
                             </div>
                             {/* NOTIFICATION */}
-                            <Frame
-                                layout={{
-                                    noSharpEdges: true
-                                }}
+                            <div
                                 style={{
-                                    margin: '10px 0',
-                                    alignItems: 'center',
-                                    justifyContent: 'space-between'
+                                    overflowY: 'auto',
+                                    maxHeight: '750px',
+                                    padding: '10px'
                                 }}
                             >
-                                <div
-                                    style={{
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                        justifyContent: 'center'
+                                <CardNotification 
+                                    availableIn={{
+                                        title: "PREMIAÇÃO DIÁRIA",
+                                        subtitle: "Dia 7"
                                     }}
-                                >
-
-                                    <Frame 
-                                        layout={{
-                                            noSharpEdges: true,
-                                            square: true
-                                        }}
-                                        style={{
-                                            maxWidth: '80px',
-                                            height: '80px',
-                                            width: '80px'
-                                        }}
-                                    >
-                                        <img src="/favor-notification.png" alt="Avatar"
-                                            style={{width: '100%'}}
-                                        />
-                                    </Frame>
-                                    <div
-                                        style={{
-                                            display: 'flex',
-                                            flexDirection: 'column',
-                                            alignItems: 'center',
-                                            justifyContent: 'space-evenly'
-                                        }}
-                                    >
-                                        <TitleSecondary >250 FAVOR</TitleSecondary>
-                                        <TitleSecondary type="subtitle">Moeda</TitleSecondary>
-                                    </div>
-                                </div>
-                                <div
-                                    style={{
-                                        display: 'flex',
-                                        flexDirection: 'column',
-                                        justifyContent: 'space-evenly'
+                                    item={{
+                                        title: "35 GEMAS",
+                                        subtitle: "Gema"
                                     }}
-                                >
-                                    <TitleSecondary style={{margin: 0}}>PREMIAÇÃO DIÁRIA</TitleSecondary>
-                                    <TitleSecondary type="subtitle" style={{margin: 0}}>Dia 3</TitleSecondary>
-                                </div>
-                                <div style={{width: '20%', maxWidth: '270px'}}></div>
-                            </Frame>
+                                    imageSrc="/gem-notification.png"
+                                />
+                                <CardNotification 
+                                    availableIn={{
+                                        title: "PREMIAÇÃO DIÁRIA",
+                                        subtitle: "Dia 6"
+                                    }}
+                                    item={{
+                                        title: "15 GEMAS",
+                                        subtitle: "Gema"
+                                    }}
+                                    imageSrc="/gem-notification.png"
+                                />
+                                <CardNotification 
+                                    availableIn={{
+                                        title: "PREMIAÇÃO DIÁRIA",
+                                        subtitle: "Dia 5"
+                                    }}
+                                    item={{
+                                        title: "1000 FAVOR",
+                                        subtitle: "Moeda"
+                                    }}
+                                    imageSrc="/favor-notification.png"
+                                />
+                                <CardNotification 
+                                    availableIn={{
+                                        title: "PREMIAÇÃO DIÁRIA",
+                                        subtitle: "Dia 4"
+                                    }}
+                                    item={{
+                                        title: "500 FAVOR",
+                                        subtitle: "Moeda"
+                                    }}
+                                    imageSrc="/favor-notification.png"
+                                />
+                                <CardNotification 
+                                    availableIn={{
+                                        title: "PREMIAÇÃO DIÁRIA",
+                                        subtitle: "Dia 3"
+                                    }}
+                                    item={{
+                                        title: "250 FAVOR",
+                                        subtitle: "Moeda"
+                                    }}
+                                    imageSrc="/favor-notification.png"
+                                />
+                                <CardNotification 
+                                    availableIn={{
+                                        title: "PREMIAÇÃO DIÁRIA",
+                                        subtitle: "Dia 2"
+                                    }}
+                                    item={{
+                                        title: "125 FAVOR",
+                                        subtitle: "Moeda"
+                                    }}
+                                    imageSrc="/favor-notification.png"
+                                />
+                                <CardNotification 
+                                    availableIn={{
+                                        title: "PREMIAÇÃO DIÁRIA",
+                                        subtitle: "Dia 1"
+                                    }}
+                                    item={{
+                                        title: "75 FAVOR",
+                                        subtitle: "Moeda"
+                                    }}
+                                    imageSrc="/favor-notification.png"
+                                />
+                            </div>
                         </div>
-                    },
-                    {
-                        id: 2,
-                        title: "DESTRAVADOS",
-                        content: <>
-                            DESTRAVADOS
-                        </>
                     },
                     {
                         id: 3,
                         title: "CLÃ",
                         content: <>
-                            CLÃ
+                            
                         </>
                     },
                     {
                         id: 4,
                         title: "MÉRITOS",
                         content: <>
-                            MÉRITOS
+                            
                         </>
                     },
                     {
                         id: 5,
                         title: "GRUPO",
                         content: <>
-                            GRUPO
+                            
                         </>
                     },
                     {
                         id: 6,
                         title: "AMIGOS",
                         content: <>
-                            AMIGOS
+                            
                         </>
                     }
                     ]}

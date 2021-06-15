@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { useEffect, useRef } from 'react';
 import { useRouter } from 'next/router';
 import { IRefModal } from '../components/Modal/interface';
@@ -28,6 +29,9 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <title>Carregando | Smite</title>
+      </Head>
       <div className={styles.homePage}>
         <Modal ref={modalRef}>
           <div className={styles.modalBody}>

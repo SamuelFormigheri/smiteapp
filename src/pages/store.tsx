@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { useEffect } from 'react';
 import styles from '../styles/store.module.scss';
 import Carousel from '../components/Carousel';
@@ -13,6 +14,10 @@ export default function Store(){
     },[]);
     
     return(
+        <>
+        <Head>
+            <title>Loja | Smite</title>
+        </Head>
         <div className={styles.content}>
             <div style={{ 
                 display: 'flex', 
@@ -253,5 +258,6 @@ export default function Store(){
                 />
             </div>
         </div>
+        </>
     )
 }
