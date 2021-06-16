@@ -43,8 +43,6 @@ This project was developed with the following technologies:
 - [Google Model Viewer](https://modelviewer.dev/)
 
 ## 💻 Usage
-
- ### Mobile App
   
     $ yarn to install the dependencies.
     
